@@ -1,17 +1,23 @@
 name = "Beautiful Hugo"
 license = "MIT"
-licenselink = "https://github.com/halogenica/Hugo-BeautifulHugo/blob/master/LICENSE"
+licenselink = "https://github.com/pad92/Hugo-BeautifulHugo/blob/master/LICENSE"
 description = "A port of Beautiful Jekyll theme"
 tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
 features = ["blog", "themes", "disqus", "minimal", "responsive", "staticman"]
 min_version = 0.28
 
 [author]
-    name = "halogenica"
-    homepage = "http://halogenica.net"
+    name = "pad"
+    homepage = "http://notes.depad.fr"
+    website = "https://notes.depad.fr"
+    repo = "https://github.com/pad92/beautifulhugo"
 
 # If Porting existing theme
 [original]
-    author =  "dattali"
-    homepage = "http://deanattali.com/beautiful-jekyll/"
-    repo = "https://github.com/daattali/beautiful-jekyll"
+    author =  "halogenica"
+    homepage = "http://halogenica.net"
+    repo = "https://github.com/halogenica/beautifulhugo"
+    
+# set Site.Params.since for overide Site.LastChange
+#[params]
+#  since = "2006"

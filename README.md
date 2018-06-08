@@ -1,12 +1,12 @@
 # Beautiful Hugo - A port of Beautiful Jekyll Theme
 
-![Beautiful Hugo Theme Screenshot](https://github.com/halogenica/beautifulhugo/blob/master/images/screenshot.png)
+![Beautiful Hugo Theme Screenshot](https://github.com/pad92/beautifulhugo/blob/master/images/screenshot.png)
 
 ## Installation
 
     $ mkdir themes
     $ cd themes
-    $ git clone https://github.com/halogenica/beautifulhugo.git beautifulhugo
+    $ git clone https://github.com/pad92/beautifulhugo.git beautifulhugo
 
 See [the Hugo documentation](https://gohugo.io/themes/installing/) for more information.
 
@@ -127,4 +127,4 @@ This is a port of the Jekyll theme [Beautiful Jekyll](https://deanattali.com/bea
 
 ## License
 
-MIT Licensed, see [LICENSE](https://github.com/halogenica/Hugo-BeautifulHugo/blob/master/LICENSE).
+MIT Licensed, see [LICENSE](https://github.com/pad92/Hugo-BeautifulHugo/blob/master/LICENSE).
