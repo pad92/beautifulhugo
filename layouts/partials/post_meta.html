@@ -1,10 +1,12 @@
 <span class="post-meta">
-  {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
-  {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
-  <i class="fa fa-calendar-o"></i>&nbsp;{{ $datestr | i18n "postedOnDate"}}
-  {{ if ne $datestr $lastmodstr }}
-    &nbsp;{{ $lastmodstr | i18n "lastModified"  }}
-  {{ end }}
+    {{ if ne $.Params.Lastmod $.Params.Date }}
+        {{ i18n "last_updated" }}
+    {{ end }}
+    <i class="fa fa-calendar-o"></i>
+    <meta content="{{ $.Params.Date }}" itemprop="datePublished">
+    <time datetime="{{ $.Params.LastMod }}" itemprop="dateModified">
+      {{ $.Lastmod.Format $.Site.Params.dateformat }}
+    </time>
   {{ if .Params.categories }}
     &nbsp;|&nbsp;
     <i class="fa fa-folder-open"></i>&nbsp;
@@ -25,14 +27,6 @@
     &nbsp;|&nbsp;
     <i class="fa fa-user"></i>
     {{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}
-  {{ end }}
-  {{ if .Params.tags }}
-  <div class="blog-tags">
-      <i class="fa fa-tags"></i>
-      {{ range .Params.tags }}
-          <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;&nbsp;
-      {{ end }}
-  </div>
   {{ end }}
   {{- if .Site.Params.staticman -}}
     &nbsp;|&nbsp;<i class="fa fa-comment-o"></i>&nbsp;

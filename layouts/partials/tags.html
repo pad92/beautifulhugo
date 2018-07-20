@@ -1,0 +1,7 @@
+{{ if .Params.tags }}
+  <div class="article-tags">
+    {{ range .Params.tags }}
+      <a class="label label-default" href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>
+    {{ end }}
+  </div>
+{{ end }}

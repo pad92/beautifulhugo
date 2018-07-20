@@ -1,28 +1,15 @@
 {{ define "main" }}
-<article class="post">
+<article class="post" itemscope itemtype="http://schema.org/Article">
   <div class="container" role="main">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <article role="main" class="blog-post">
-          {{ if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) }}
-          <div class="post-toc navbar-custom" id="post-toc">
-            <h2 class="post-toc-title">{{ i18n "toc" . | safeHTML }}</h2>
-            <div class="post-toc-content always-active">
-              {{.TableOfContents}}
-            </div>
-          </div>
-          {{- end }}
+          {{ partial "toc" . }}
           <div class="post-content">
             {{ .Content }}
           </div>
-          {{ if or .Params.socialShare (and .Site.Params.socialShare (ne .Params.socialShare false)) }}
-              <hr/>
-              <section id="social-share">
-                <ul class="list-inline footer-links">
-                  {{ partial "share-links" . }}
-                </ul>
-              </section>
-          {{ end }}
+          {{ partial "tags" . }}
+          {{ partial "share-links" . }}
         </article>
         {{ if ne .Type "page" }}
           <ul class="pager blog-pager">
@@ -38,7 +25,6 @@
             {{ end }}
           </ul>
         {{ end }}
-
         {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
           {{ if .Site.DisqusShortname }}
             <div class="disqus-comments">
@@ -51,7 +37,6 @@
             </div>
           {{ end }}
         {{ end }}
-
       </div>
     </div>
   </div>
