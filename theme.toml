@@ -2,8 +2,9 @@ name = "Beautiful Hugo"
 license = "MIT"
 licenselink = "https://github.com/pad92/Hugo-BeautifulHugo/blob/master/LICENSE"
 description = "A port of Beautiful Jekyll theme"
-tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
+tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive", "seo"]
 features = ["blog", "themes", "disqus", "minimal", "responsive", "staticman"]
+
 min_version = 0.28
 
 [author]
@@ -17,7 +18,7 @@ min_version = 0.28
     author =  "halogenica"
     homepage = "http://halogenica.net"
     repo = "https://github.com/halogenica/beautifulhugo"
-    
+
 # set Site.Params.since for overide Site.LastChange
 #[params]
 #  since = "2006"

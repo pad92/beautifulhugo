@@ -3,34 +3,25 @@
   "@context": "http://schema.org",
   "@type": "Article",
   "author": {
-    "name" : "{{ .Params.author.name }}"
+    "name" : "{{ if .Params.author -}}{{ .Params.author }}{{- else if .Site.Author.name -}}{{ .Site.Author.name }}{{- end }}"
   },
   "headline": "{{ .Title }}",
-  "description": "{{ .Params.description }}",
+  "description" : "{{ if .Description }}{{ .Description | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | plainify  }}{{ end }}{{ end }}",
+  "inLanguage" : "{{ .Lang }}",
   "wordCount": {{ .WordCount }},
   "datePublished" : "{{ .PublishDate.Format "2006-01-02T15:04:05" }}",
   "dateModified" : "{{ .Date.Format "2006-01-02T15:04:05"  }}",
-  "image" : {
-      "@context": "http://schema.org",
-      "@type": "ImageObject",
-      "author": "{{ .Params.image.author }}",
-      "url": "{{ .Params.image.src }}",
-      "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05" }}",
-      "name": "{{ .Params.image.title }}",
-      "height" : {{ .Params.image.height }},
-      "width" : {{ .Params.image.width }},
-      "license" : "{{ .Params.image.license_link }}",
-      "isBasedOn" : "{{ .Params.image.link }}"
-    },
+  "image" : "{{ if .Params.featured_image }} {{ .Params.featured_image | absURL }}{{ else }}{{ .Site.Params.logo | absURL }}{{ end }}",
+  "keywords" : [ "{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" ],
   "mainEntityOfPage" : "{{ .Permalink }}",
   "publisher" : {
     "@type": "Organization",
-    "name" : "{{ $.Site.Params.publisherName }}",
+    "name" : "{{ .Site.BaseURL }}",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "{{ $.Site.Params.publisherLogo }}",
-        "height" : {{ $.Site.Params.publisherLogoHeight }},
-        "width" : {{ $.Site.Params.publisherLogoWidth }}
+        "url" : "{{ .Site.Params.logo | absURL }}",
+        "height" :  60 ,
+        "width" :  60
     }
   }
 }
