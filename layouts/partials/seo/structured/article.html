@@ -2,9 +2,17 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "author": {
-    "name" : "{{ if .Params.author -}}{{ .Params.author }}{{- else if .Site.Author.name -}}{{ .Site.Author.name }}{{- end }}"
+  {{ if .Params.author -}}
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Params.author }}"
   },
+  {{- else if .Site.Author.name -}}
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Site.Author.name }}"
+  },
+  {{- end }}
   "headline": "{{ .Title }}",
   "description" : "{{ if .Description }}{{ .Description | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | plainify  }}{{ end }}{{ end }}",
   "inLanguage" : "{{ .Lang }}",
