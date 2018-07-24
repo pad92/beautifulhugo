@@ -810,33 +810,6 @@ ul.share li {
   margin-right: 5px;
 }
 
-ul.share li:last-of-type {
-  margin-right: 0;
-}
-
-ul.share li .fa {
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 16px;
-  text-align: center;
-  transition: all 150ms ease-in-out;
-  color: #fff;
-}
-
-ul.share li a {
-  background-color: #b5c6ce;
-  display: block;
-  border-radius: 50%;
-  text-decoration: none !important;
-  margin: 0;
-}
-
-ul.share li:hover .fa {
-  transform: scale(1.4)
-}
-
 /*************************************************
  *  Tags/Labels
  **************************************************/

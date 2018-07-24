@@ -35,6 +35,12 @@ title = "Bitbucket"
 icon = "fa-bitbucket"
 
 [[social_icons]]
+id = "docker"
+url = "https://hub.docker.com/u/%s"
+title = "Docker"
+icon = "fa-docker"
+
+[[social_icons]]
 id = "twitter"
 url = "https://twitter.com/%s"
 title = "Twitter"
