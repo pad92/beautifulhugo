@@ -1,8 +1,5 @@
 {{ if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) }}
-<div class="post-toc navbar-custom" id="post-toc">
-  <h2 class="post-toc-title">{{ i18n "toc" . | safeHTML }}</h2>
-  <div class="post-toc-content always-active">
-    {{.TableOfContents}}
-  </div>
-</div>
+  <aside class="toc">
+    {{ .TableOfContents }}
+  </aside>
 {{- end }}

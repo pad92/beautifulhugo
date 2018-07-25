@@ -1,41 +1,41 @@
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <!-- Site Title, Description, Author, and Favicon -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!-- Site Title, Description, Author, and Favicon -->
 {{- with .Title | default .Site.Title }}<title>{{ . }}</title>{{- end }}
 {{- with .Description | default .Params.subtitle | default .Summary }}
-  <meta name="description" content="{{ . }}">
+<meta name="description" content="{{ . }}">
 {{- end }}
 {{- with .Site.Author.name }}
-  <meta name="author" content="{{ . }}"/>
+<meta name="author" content="{{ . }}"/>
 {{- end }}
 {{- partial "seo/main.html" . }}
 {{- with .Site.Params.favicon }}
-  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
+<link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
 {{- end -}}
 
-  {{ .Hugo.Generator -}}
+{{ .Hugo.Generator -}}
 <!-- Links and stylesheets -->
-  <link rel="canonical" href="{{ .URL | absLangURL }}" />
-  <link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
-  {{- if .Site.Params.staticman -}}
-  <link rel="stylesheet" href="{{ "css/staticman.css" | absURL }}" />
-  {{- end -}}
+<link rel="canonical" href="{{ .URL | absLangURL }}" />
+<link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
+{{- if .Site.Params.staticman -}}
+<link rel="stylesheet" href="{{ "css/staticman.css" | absURL }}" />
+{{- end -}}
 
-  {{- if .Site.Params.useHLJS }}
-  <link rel="stylesheet" href="{{ "css/highlight.min.css" | absURL }}" />
-  {{- else -}}
-  <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
-  {{- end -}}
-  <link rel="stylesheet" href="{{ "css/codeblock.css" | absURL }}" />
+{{- if .Site.Params.useHLJS }}
+<link rel="stylesheet" href="{{ "css/highlight.min.css" | absURL }}" />
+{{- else -}}
+<link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
+{{- end -}}
+<link rel="stylesheet" href="{{ "css/codeblock.css" | absURL }}" />
 
-  {{- if .Site.Params.staticman.recaptcha -}}
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-  {{- end -}}
+{{- if .Site.Params.staticman.recaptcha -}}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+{{- end -}}
 
 {{- partial "head_custom.html" . }}
 {{- partial "load-photoswipe-theme.html" . }}
