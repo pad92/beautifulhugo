@@ -53,6 +53,7 @@ blockquote {
 blockquote p:first-child {
   margin-top: 0;
 }
+
 hr.small {
   max-width: 100px;
   margin: 15px auto;
@@ -476,6 +477,8 @@ footer .theme-by {
     float: left;
   }
 }
+
+
 /* --- Post and page headers --- */
 
 .intro-header {
@@ -742,11 +745,15 @@ aside.toc{
   padding-left: 12px;
   margin: 0;
 }
+/* --- Shortcode --- */
 
+.twitter-tweet-rendered {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
 
-/*************************************************
- *  Sharing
- **************************************************/
+/* --- Sharing --- */
 
 .share-box {
   float: right;
@@ -766,38 +773,7 @@ ul.share li {
   margin-right: 5px;
 }
 
-/*************************************************
- *  Tags/Labels
- **************************************************/
-
-.label-default {
-  border: none;
-  color: rgba(0,0,0,.68);
-  background: rgba(0,0,0,.05);
-  font-weight: normal;
-  border-radius: 3px;
-  padding: 5px 10px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-}
-
-.article-tags > .label-default:last-child {
-  margin-right: 0;
-}
-
-.label-default[href]:focus,
-.label-default[href]:hover {
-  background: rgba(0,0,0,.1);
-}
-
-a.label:focus,
-a.label:hover {
-  color: rgba(0,0,0,.68);
-}
-
-/*************************************************
- *  Tags/Labels
- **************************************************/
+/* --- Tags/Labels --- */
 
 .label-default {
   border: none;
