@@ -7,9 +7,17 @@
         "position": 1,
         "item": {
           "@id": "{{ .Site.BaseURL }}",
-          "name": "home"
+          "name": "{{ .Site.Title }}"
         }
-    },{
+    }{{- if .Params.categories }}{{- range .Params.categories }}
+    ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ "/categories/" | absURL }}{{ . | urlize }}/",
+          "name": "{{ . | humanize }}"
+        }
+    }{{- end }}{{- end }},{
         "@type": "ListItem",
         "position": 3,
         "item": {
