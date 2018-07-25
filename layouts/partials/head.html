@@ -9,6 +9,7 @@
 {{- with .Site.Author.name }}
   <meta name="author" content="{{ . }}"/>
 {{- end }}
+{{- partial "seo/main.html" . }}
 {{- with .Site.Params.favicon }}
   <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
 {{- end -}}
@@ -39,4 +40,3 @@
 {{- partial "head_custom.html" . }}
 {{- partial "load-photoswipe-theme.html" . }}
 {{ template "_internal/google_analytics_async.html" . }}
-{{ partial "seo/main.html" . }}
