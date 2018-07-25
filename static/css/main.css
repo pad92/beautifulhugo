@@ -1,7 +1,7 @@
 /* --- General --- */
 
 body {
-  font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+  font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
   color: #404040;
   position: relative;
@@ -34,7 +34,7 @@ p a {
   color: #008AFF;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: Athelas,STHeiti,Microsoft Yahei,serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 a {
@@ -209,9 +209,9 @@ img {
   border-radius: 50%;
   margin-left: -50%;
   display: inline-block;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 1px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, .8);
 }
 .navbar-custom .avatar-container  .avatar-img {
   width: 100%;
