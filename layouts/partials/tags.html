@@ -1,6 +1,5 @@
 {{ if .Params.tags }}
 <span class="post-tags">
-  <i class="fas fa-tags"></i>
-    &nbsp;{{ range .Params.tags }}<a href="{{ $.Site.LanguagePrefix | absURL }}tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;{{ end }}
+  {{ range .Params.tags }}<i class="fas fa-tags"></i>&nbsp;<a href="{{ $.Site.LanguagePrefix | absURL }}tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;{{ end }}
 </span>
 {{ end }}

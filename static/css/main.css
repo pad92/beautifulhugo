@@ -385,8 +385,7 @@ footer .theme-by {
 .post-preview .post-meta a,
 .post-heading .post-meta a,
 .post-tags a:focus,
-.post-tags a:hover,
-.post-tags {
+.post-tags a:hover {
   color: #404040;
   text-decoration: none;
 }
