@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="page-heading">
-              <h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+              <h1>archives</h1>
               <hr class="small">
             </div>
           </div>
@@ -19,11 +19,8 @@
   <div class="container" role="main">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        {{ with .Content }}
-          <div class="well">{{.}}</div>
-        {{ end }}
         <div class="posts-list">
-            <article class="post-preview">
+            <section id="archive" class="archive">
                 {{- range $index, $element := $paginator.Pages -}}
                 {{- $thisYear := $element.Date.Format "2006" }}
                 {{- $lastElement := $index | add -1 | index $paginator.Pages }}
@@ -43,7 +40,7 @@
                     </span>
                 </div>
                 {{- end -}}
-            </article>
+            </section>
         </div>
         {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
           <ul class="pager main-pager">

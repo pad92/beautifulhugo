@@ -799,3 +799,19 @@ a.label:focus,
 a.label:hover {
   color: rgba(0,0,0,.68);
 }
+/* --- Archives --- */
+
+.archive .archive-post {
+    padding: 3px 20px;
+    padding-top: 3px;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    border-left: 1px solid #cacaca;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(202, 202, 202);
+}
+.archive .archive-post .archive-post-time {
+    margin-right: 10px;
+}
