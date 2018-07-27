@@ -1,8 +1,7 @@
 <span class="post-meta">
-    {{ if ne $.Params.Lastmod $.Params.Date }}
-        {{ i18n "last_updated" }}
-    {{ end }}
-    <i class="fas fa-calendar"></i>&nbsp;{{ $.Lastmod.Format $.Site.Params.dateformat }}
+  {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
+  {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
+    <i class="fas fa-pen-nib"></i>&nbsp;{{ $datestr | i18n "postedOnDate"}}
   {{ if .Params.categories }}
     &bull;&nbsp;<i class="fas fa-folder-open"></i>
     {{- range .Params.categories }}&nbsp;<a href="{{ $.Site.LanguagePrefix | absURL }}categories/{{ . | urlize }}/">{{ . }}</a>{{- end }}
@@ -39,4 +38,7 @@
     {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator") -}}
     &nbsp;&bull;&nbsp;&nbsp;{{ i18n "translationsLabel" }}{{ $linksOutput }}
   {{- end }}
+  {{ if ne $datestr $lastmodstr }}
+      <br><i class="fas fa-edit"></i>&nbsp;{{ $lastmodstr | i18n "lastModified"}}
+  {{ end }}
 </span>
