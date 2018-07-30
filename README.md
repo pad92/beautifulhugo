@@ -1,16 +1,29 @@
-# Beautiful Hugo - A port of Beautiful Jekyll Theme
+![Elegant Hugo Theme Screenshot](https://github.com/pad92/eleganthugo/blob/master/images/tn.png)
 
-![Beautiful Hugo Theme Screenshot](https://github.com/pad92/beautifulhugo/blob/master/images/screenshot.png)
+# Elegant Hugo
+
+ Elegant Hugo is a fork of [Beautiful Hugo](https://themes.gohugo.io/beautifulhugo/)
+
 
 ## Installation
 
-    $ mkdir themes
-    $ cd themes
-    $ git clone https://github.com/pad92/beautifulhugo.git beautifulhugo
+    $ git clone https://github.com/pad92/eleganthugo.git themes/eleganthugo
+    $ cp themes/eleganthugo/exampleSite/config.toml .
 
 See [the Hugo documentation](https://gohugo.io/themes/installing/) for more information.
 
 ## Extra Features
+
+ - SEO structured data
+ - Font Awesome v5
+   - Add docker into footer
+ - Table of contents
+ - Archives page ( from [Even theme](https://themes.gohugo.io/hugo-theme-even/) )
+ - Rewrite page header and footer
+ - Use post logo for top images
+ - Change 404 template ( remove image )
+ 
+## Features from Beautiful Hugo
 
 ### Responsive
 
@@ -112,19 +125,19 @@ If the source of your site is in a Git repo, the SHA corresponding to the commit
 [Params]
   commit = "https://github.com/<username>/<siterepo>/tree/"
 ```
-  
+
 This can be achieved by running the next command prior to calling Hugo:
 
 ```
   GIT_COMMIT_SHA=`git rev-parse --verify HEAD` GIT_COMMIT_SHA_SHORT=`git rev-parse --short HEAD`
 ```
-  
+
 See at [xor-gate/xor-gate.org](https://github.com/xor-gate/xor-gate.org) an example of how to add it to a continuous integration system.
-  
+
 ## About
 
-This is a port of the Jekyll theme [Beautiful Jekyll](https://deanattali.com/beautiful-jekyll/) by [Dean Attali](https://deanattali.com/aboutme#contact). It supports most of the features of the original theme.
+This is a port of the Jekyll theme [Elegant Jekyll](https://deanattali.com/Elegant-jekyll/) by [Dean Attali](https://deanattali.com/aboutme#contact). It supports most of the features of the original theme.
 
 ## License
 
-MIT Licensed, see [LICENSE](https://github.com/pad92/Hugo-BeautifulHugo/blob/master/LICENSE).
+MIT Licensed, see [LICENSE](https://github.com/pad92/Hugo-ElegantHugo/blob/master/LICENSE).
