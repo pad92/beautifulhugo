@@ -1,7 +1,7 @@
 baseurl = "https://example.com"
 DefaultContentLanguage = "en"
-title = "Beautiful Hugo"
-theme = "beautifulhugo"
+title = "Elegant Hugo"
+theme = "eleganthugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "native"
 pygmentsUseClasses = true
@@ -80,6 +80,7 @@ googleAnalytics = "XXX"
   googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
   github = "username"
   gitlab = "username"
+  docker = "username"
   bitbucket = "username"
   twitter = "username"
   reddit = "username"
