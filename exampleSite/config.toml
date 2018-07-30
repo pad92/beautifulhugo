@@ -16,8 +16,6 @@ canonifyURLs = true
 enableGitInfo = false
 googleAnalytics = "XXX"
 
-[permalinks]
-  post = "/:year/:month/:slug/"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
