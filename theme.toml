@@ -1,6 +1,6 @@
 name = "Beautiful Hugo v2"
 license = "MIT"
-licenselink = "https://github.com/pad92/Hugo-BeautifulHugo/blob/master/LICENSE"
+licenselink = "https://github.com/pad92/eleganthugo/blob/master/LICENSE"
 description = "A port of Beautiful Jekyll theme"
 tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive", "seo"]
 features = ["blog", "themes", "disqus", "minimal", "responsive", "staticman"]
@@ -11,7 +11,7 @@ min_version = 0.28
     name = "pad"
     homepage = "http://notes.depad.fr"
     website = "https://notes.depad.fr"
-    repo = "https://github.com/pad92/beautifulhugo"
+    repo = "https://github.com/pad92/eleganthugo"
 
 # If Porting existing theme
 [original]
