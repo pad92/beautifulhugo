@@ -10,6 +10,7 @@ Forked from [Beautiful Hugo](https://github.com/halogenica/beautifulhugo) and br
 - docker into footer
 - Table of contents
 - Archives page ( from [Even theme](https://themes.gohugo.io/hugo-theme-even/) )
+- Related posts
 
 ### update
 

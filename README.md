@@ -22,6 +22,7 @@ See [the Hugo documentation](https://gohugo.io/themes/installing/) for more info
  - Rewrite page header and footer
  - Use post logo for top images
  - Change 404 template ( remove image )
+ - Related post from tags
  
 ## Features from Beautiful Hugo
 
