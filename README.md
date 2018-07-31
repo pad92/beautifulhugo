@@ -10,7 +10,17 @@
 
 See [the Hugo documentation](https://gohugo.io/themes/installing/) for more information.
 
-## Extra Features
+## Features
+
+ - SEO structured data
+ - Font Awesome v5
+   - Add docker into footer
+ - Table of contents
+ - Archives page ( from [Even theme](https://themes.gohugo.io/hugo-theme-even/) )
+ - Rewrite page header and footer
+ - Use post logo for top images
+ - Change 404 template ( remove image )
+ - Related post from tags
 
 ### Responsive
 
@@ -112,15 +122,15 @@ If the source of your site is in a Git repo, the SHA corresponding to the commit
 [Params]
   commit = "https://github.com/<username>/<siterepo>/tree/"
 ```
-  
+
 This can be achieved by running the next command prior to calling Hugo:
 
 ```
   GIT_COMMIT_SHA=`git rev-parse --verify HEAD` GIT_COMMIT_SHA_SHORT=`git rev-parse --short HEAD`
 ```
-  
+
 See at [xor-gate/xor-gate.org](https://github.com/xor-gate/xor-gate.org) an example of how to add it to a continuous integration system.
-  
+
 ## About
 
 This is a port of the Jekyll theme [Beautiful Jekyll](https://deanattali.com/beautiful-jekyll/) by [Dean Attali](https://deanattali.com/aboutme#contact). It supports most of the features of the original theme.
