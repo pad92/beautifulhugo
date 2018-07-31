@@ -63,6 +63,6 @@
 - id: yourWebsite
   translation: "You website"
 
-# Toc
-- id: toc
-  translation: "文章目录"
+# Related
+- id: related
+  translation : "Related Content"

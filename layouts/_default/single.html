@@ -2,8 +2,8 @@
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{ partial "toc" . }}
       <article role="main" class="blog-post">
-          {{ partial "toc" . }}
           {{ .Content }}
         {{ partial "tags" . }}
         {{ partial "share-links" . }}
@@ -22,6 +22,7 @@
           {{ end }}
         </ul>
       {{ end }}
+      {{ partial "related" . }}
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
         {{ if .Site.DisqusShortname }}
           <div class="disqus-comments">

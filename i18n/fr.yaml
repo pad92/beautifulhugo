@@ -63,6 +63,6 @@
 - id: yourWebsite
   translation: "Votre site web"
 
-# Toc
-- id: toc
-  translation: "Contenu"
+# Related
+- id: related
+  translation : "Sur le meme sujet"
