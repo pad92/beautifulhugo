@@ -1,18 +1,16 @@
-![Elegant Hugo Theme Screenshot](https://github.com/pad92/eleganthugo/blob/master/images/tn.png)
+# Beautiful Hugo - A port of Beautiful Jekyll Theme
 
-# Elegant Hugo
-
- Elegant Hugo is a fork of [Beautiful Hugo](https://themes.gohugo.io/beautifulhugo/)
-
+![Beautiful Hugo Theme Screenshot](https://github.com/halogenica/beautifulhugo/blob/master/images/screenshot.png)
 
 ## Installation
 
-    $ git clone https://github.com/pad92/eleganthugo.git themes/eleganthugo
-    $ cp themes/eleganthugo/exampleSite/config.toml .
+    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/halogenica/beautifulhugo.git beautifulhugo
 
 See [the Hugo documentation](https://gohugo.io/themes/installing/) for more information.
 
-## Extra Features
+## Features
 
  - SEO structured data
  - Font Awesome v5
@@ -23,8 +21,6 @@ See [the Hugo documentation](https://gohugo.io/themes/installing/) for more info
  - Use post logo for top images
  - Change 404 template ( remove image )
  - Related post from tags
- 
-## Features from Beautiful Hugo
 
 ### Responsive
 
@@ -137,8 +133,8 @@ See at [xor-gate/xor-gate.org](https://github.com/xor-gate/xor-gate.org) an exam
 
 ## About
 
-This is a port of the Jekyll theme [Elegant Jekyll](https://deanattali.com/Elegant-jekyll/) by [Dean Attali](https://deanattali.com/aboutme#contact). It supports most of the features of the original theme.
+This is a port of the Jekyll theme [Beautiful Jekyll](https://deanattali.com/beautiful-jekyll/) by [Dean Attali](https://deanattali.com/aboutme#contact). It supports most of the features of the original theme.
 
 ## License
 
-MIT Licensed, see [LICENSE](https://github.com/pad92/Hugo-ElegantHugo/blob/master/LICENSE).
+MIT Licensed, see [LICENSE](https://github.com/halogenica/Hugo-BeautifulHugo/blob/master/LICENSE).

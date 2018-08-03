@@ -6,7 +6,7 @@
 - id: postedOnDate
   translation: "Posté le {{ .Count }}"
 - id: lastModified
-  translation: "Dernière modification le {{ .Count }}"
+  translation: "(Dernière modification le {{ .Count }})"
 - id: translationsLabel
   translation: "Autres langues : "
 - id: translationsSeparator
@@ -29,11 +29,11 @@
 
 # 404 page
 - id: pageNotFound
-  translation: "Oups, cette page n'existe pas. (erreur 404)"
+  translation: "Ourp, cette page n'existe pas. (erreur 404)"
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: 'Carbure avec <a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/pad92/eleganthugo">Elegant Hugo</a>'
+  translation: 'Carbure avec <a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
 
 # Navigation
 - id: toggleNavigation

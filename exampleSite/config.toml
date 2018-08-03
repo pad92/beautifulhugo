@@ -1,21 +1,17 @@
-baseurl = "https://example.com"
+baseurl = "https://username.github.io"
 DefaultContentLanguage = "en"
-title = "Elegant Hugo"
-theme = "eleganthugo"
+#DefaultContentLanguage = "ja"
+title = "Beautiful Hugo"
+theme = "beautifulhugo"
 metaDataFormat = "yaml"
-pygmentsStyle = "native"
+pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-pygmentsUseClassic = false
-#pygmentsOptions = "linenos=inline"
-disqusShortname = "XXX"
-enableRobotsTXT = true
-enableEmoji = true
-canonifyURLs = true
-enableGitInfo = false
-googleAnalytics = "XXX"
-
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
@@ -23,43 +19,15 @@ googleAnalytics = "XXX"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
-  comments = true
   commit = false
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
-  linkToMarkDown = false
-  moreMeta = true
-  postMetaInFooter = true
-  readingTime = true
-  WordCount = false
   rss = true
   since = "2006"
   socialShare = true
   toc = true
   katex = false
   useHLJS = true
-  fancybox = true
-
-[privacy]
-  [privacy.disqus]
-    disable = false
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    disable = false
-    respectDoNotTrack = true
-    useSessionStorage = true
-  [privacy.instagram]
-    disable = false
-    simple = false
-  [privacy.speakerDeck]
-    disable = false
-  [privacy.twitter]
-    disable = false
-    enableDNT = true
-  [privacy.vimeo]
-    disable = false
-  [privacy.youtube]
-    disable = false
-    privacyEnhanced = true
+  socialShare = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
@@ -81,7 +49,6 @@ googleAnalytics = "XXX"
   googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
   github = "username"
   gitlab = "username"
-  docker = "username"
   bitbucket = "username"
   twitter = "username"
   reddit = "username"
