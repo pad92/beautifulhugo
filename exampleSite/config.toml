@@ -35,6 +35,7 @@ googleAnalytics = "XXX"
   since = "2006"
   socialShare = true
   toc = true
+  katex = false
   useHLJS = true
   fancybox = true
 

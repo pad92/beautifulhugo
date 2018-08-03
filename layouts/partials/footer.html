@@ -59,11 +59,13 @@
     </div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+{{- if or .Params.Katex (and .Site.Params.Katex (ne .Params.Katex false)) -}}
+<script src="{{ "libs/katex/katex.js"| absURL }}"></script>
+<script src="{{ "libs/katex/contrib/auto-render.js"| absURL }}"></script>
+{{- end -}}
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="{{ "libs/bootstrap/js/bootstrap.js"| absURL }}"></script>
+
 <script src="{{ "js/main.js" | absURL }}"></script>
 {{- if .Site.Params.staticman }}
 <script src="{{ "js/staticman.js" | absURL }}"></script>
