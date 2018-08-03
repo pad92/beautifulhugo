@@ -63,7 +63,7 @@
 <script src="{{ "libs/katex/katex.js"| absURL }}"></script>
 <script src="{{ "libs/katex/contrib/auto-render.js"| absURL }}"></script>
 {{- end -}}
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="{{ "js/jquery-3.3.1.min.js"| absURL }}"></script>
 <script src="{{ "libs/bootstrap/js/bootstrap.js"| absURL }}"></script>
 
 <script src="{{ "js/main.js" | absURL }}"></script>
@@ -76,8 +76,8 @@
 <script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
 {{- end -}}
 <script> renderMathInElement(document.body); </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="{{ "libs/PhotoSwipe/photoswipe.js"| absURL }}"></script>
+<script src="{{ "libs/PhotoSwipe/photoswipe-ui-default.js"| absURL }}"></script>
 <script src="{{ "js/load-photoswipe.js" | absURL }}"></script>
 <!-- Google Custom Search Engine -->
 {{ if .Site.Params.gcse }}
