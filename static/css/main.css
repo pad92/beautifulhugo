@@ -403,18 +403,15 @@ footer .theme-by {
 
 .post-preview .post-meta,
 .post-heading .post-meta,
+.post-preview .post-meta a,
+.post-heading .post-meta a,
+.post-tags a:focus,
+.post-tags a:hover,
 .post-tags {
   color: #808080;
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
-}
-
-.post-preview .post-meta a,
-.post-heading .post-meta a,
-.post-tags a:focus,
-.post-tags a:hover {
-  color: #404040;
   text-decoration: none;
 }
 
@@ -595,7 +592,8 @@ footer .theme-by {
   -moz-box-shadow: 1px 1px 3px #000;
 }
 
-.intro-header.big-img .post-heading .post-meta {
+.intro-header.big-img .post-heading .post-meta,
+.intro-header.big-img .post-heading .post-meta a {
   color: #EEE;
 }
 
