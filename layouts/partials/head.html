@@ -9,7 +9,10 @@
 {{- with .Site.Author.name }}
 <meta name="author" content="{{ . }}"/>
 {{- end }}
-{{- partial "seo/main.html" . }}
+{{- partial "seo/schema.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
 {{- with .Site.Params.favicon }}
 <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
 {{- end -}}
