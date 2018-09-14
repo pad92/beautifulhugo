@@ -1,6 +1,6 @@
 # Beautiful Hugo - A port of Beautiful Jekyll Theme
 
-![Beautiful Hugo Theme Screenshot](images/tn.png)
+![Beautiful Hugo Theme Screenshot](images/screenshot.png)
 
 ## Installation
 
