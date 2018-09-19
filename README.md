@@ -19,8 +19,9 @@ See [the Hugo documentation](https://gohugo.io/themes/installing/) for more info
  - Archives page ( from [Even theme](https://themes.gohugo.io/hugo-theme-even/) )
  - Rewrite page header and footer
  - Use post logo for top images
- - Change 404 template ( remove image )
+ - Change 404 template
  - Related post from tags
+ - Added support for mermaid diagrams
 
 ### Responsive
 
