@@ -1,32 +1,50 @@
 baseurl = "https://username.github.io"
 DefaultContentLanguage = "en"
-#DefaultContentLanguage = "ja"
 title = "Beautiful Hugo"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
-pygmentsStyle = "trac"
+pygmentsStyle = "native"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+pygmentsUseClassic = false
+# pygmentsOptions = "linenos=inline"
+# disqusShortname = ""
+eunableRobotsTXT = true
+enableEmoji = true
+canonifyURLs = true
+enableGitInfo = true
+#googleAnalytics = ""
 
-[Params]
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
   subtitle = "Build a beautiful and simple website in minutes"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
+  comments = false
   commit = false
+#  gcse = ""
+#  keywords = ["your", "keywords"]
+  linkToMarkDown = false
+  moreMeta = true
+  postMetaInFooter = true
+  readingTime = true
+  WordCount = false
   rss = true
-  since = "2006"
+#  since = "2006"
   socialShare = true
   toc = true
   katex = false
   useHLJS = true
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  fancybox = true
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
