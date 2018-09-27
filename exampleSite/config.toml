@@ -41,8 +41,9 @@ enableGitInfo = true
   rss = true
 #  since = "2006"
   socialShare = true
-  toc = true
-  katex = false
+  toc = false
+  Katex = false
+  Photoswipe = false
   useHLJS = true
   fancybox = true
 
@@ -101,19 +102,19 @@ enableGitInfo = true
 [[menu.main]]
     parent = "samples"
     name = "Big Image Sample"
-    url = "post/2017-03-07-bigimg-sample"
+    url = "/2017/03/big-image-sample/"
     weight = 1
 
 [[menu.main]]
     parent = "samples"
     name = "Math Sample"
-    url = "post/2017-03-05-math-sample"
+    url = "/2017/03/math-sample/"
     weight = 2
 
 [[menu.main]]
     parent = "samples"
     name = "Code Sample"
-    url = "post/2016-03-08-code-sample"
+    url = "/2016/03/code-sample/"
     weight = 3
 
 [[menu.main]]
