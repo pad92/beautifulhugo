@@ -75,10 +75,14 @@
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
 {{- end -}}
+{{- if or .Params.Katex (and .Site.Params.Katex (ne .Params.Katex false)) -}}
 <script> renderMathInElement(document.body); </script>
+{{- end -}}
+{{- if or .Params.Photoswipe (and .Site.Params.Photoswipe (ne .Params.Photoswipe false)) -}}
 <script src="{{ "libs/PhotoSwipe/photoswipe.js"| absURL }}"></script>
 <script src="{{ "libs/PhotoSwipe/photoswipe-ui-default.js"| absURL }}"></script>
 <script src="{{ "js/load-photoswipe.js" | absURL }}"></script>
+{{- end -}}
 <!-- Google Custom Search Engine -->
 {{ if .Site.Params.gcse }}
 <script>

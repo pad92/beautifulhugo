@@ -42,6 +42,9 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
 {{- end -}}
 
-{{- partial "head_custom.html" . }}
+{{- if or .Params.Photoswipe (and .Site.Params.Photoswipe (ne .Params.Photoswipe false)) -}}
 {{- partial "load-photoswipe-theme.html" . }}
+{{- end -}}
+
+{{- partial "head_custom.html" . }}
 {{ template "_internal/google_analytics_async.html" . }}
