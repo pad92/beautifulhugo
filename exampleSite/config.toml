@@ -41,6 +41,7 @@ enableGitInfo = true
   rss = true
 #  since = "2006"
   socialShare = true
+  showRelatedPosts = true
   toc = false
   Katex = false
   Photoswipe = false
