@@ -1,5 +1,17 @@
 {{ if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) }}
+  {{ $toc := .TableOfContents }}
+  {{ $toc := (replace $toc "<ul>\n<li>\n<ul>" "<ul>") }}
+  {{ $toc := (replace $toc "<ul>\n<li>\n<ul>" "<ul>") }}
+  {{ $toc := (replace $toc "<ul>\n<li>\n<ul>" "<ul>") }}
+  {{ $toc := (replace $toc "</ul></li>\n</ul>" "</ul>") }}
+  {{ $toc := (replace $toc "</ul></li>\n</ul>" "</ul>") }}
+  {{ $toc := (replace $toc "</ul></li>\n</ul>" "</ul>") }}
+  <!-- count the number of remaining li tags -->
+  <!-- and only display ToC if more than 1, otherwise why bother -->
+
   <aside class="toc-article">
-    {{ .TableOfContents }}
+    {{ if gt (len (split $toc "<li>")) 2 }}
+      {{ safeHTML $toc }}
+    {{ end }}
   </aside>
 {{- end }}
