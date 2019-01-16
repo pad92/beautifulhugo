@@ -824,6 +824,7 @@ aside.toc {
   line-height: 1em;
   font-size: .8em;
   float: right;
+  border-radius: 4px;
 }
 
 #TableOfContents ul {
