@@ -1,5 +1,7 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: "{{ replace .Name "-" " " | title }}"
+author: ""
+type: ""
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 type: post

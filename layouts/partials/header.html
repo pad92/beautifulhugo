@@ -1,3 +1,5 @@
+{{- partial "load-photoswipe-theme.html" . }}
+
 {{ if .IsHome }}
   {{ if .Site.Params.homeTitle }}{{ $.Scratch.Set "title" .Site.Params.homeTitle }}{{ else }}{{ $.Scratch.Set "title" .Site.Title }}{{ end }}
   {{ if .Site.Params.subtitle }}{{ $.Scratch.Set "subtitle" .Site.Params.subtitle }}{{ end }}
@@ -8,10 +10,20 @@
   {{ if .Params.bigimg }}{{ $.Scratch.Set "bigimg" .Params.bigimg }}{{ end }}
 {{ end }}
 {{ $bigimg := $.Scratch.Get "bigimg" }}
+{{ $title := $.Scratch.Get "title" }}
+{{ $subtitle := $.Scratch.Get "subtitle" }}
 
-{{ if or $bigimg ($.Scratch.Get "title") }}
+{{ if or $bigimg $title }}
   {{ if $bigimg }}
-    <div id="header-big-imgs" data-num-img={{len $bigimg}} {{range $i, $img := $bigimg}}data-img-src-{{add $i 1}}="{{$img.src | absURL }}" {{ if $img.desc}}data-img-desc-{{add $i 1}}="{{$img.desc}}"{{end}}{{end}}></div>
+    <div id="header-big-imgs" data-num-img={{len $bigimg}}
+      {{range $i, $img := $bigimg}}
+         {{ if (fileExists $img.src)}}
+          data-img-src-{{add $i 1}}="{{$img.src | absURL }}"
+         {{else}}
+          data-img-src-{{add $i 1}}="{{$img.src}}"
+         {{end}}
+         {{ if $img.desc}}data-img-desc-{{add $i 1}}="{{$img.desc}}"{{end}}
+      {{end}}></div>
   {{ end }}
 
   <header class="header-section {{ if $bigimg }}has-img{{ end }}">
@@ -42,7 +54,6 @@
       </div>
     {{end}}
     <div class="intro-header no-img">
-      {{ $subtitle := $.Scratch.Get "subtitle" }}
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -59,12 +70,11 @@
                 {{ if eq .Type "post" }}
                   {{ partial "post_meta.html" . }}
                 {{ end }}
+              {{ end }}
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
-{{ else }}
   <div class="intro-header"></div>
-{{ end }}
