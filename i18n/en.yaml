@@ -70,5 +70,5 @@
   translation: "comments"
 
 # Related posts
-- id: related
+- id: seeAlso
   translation: "See also"
