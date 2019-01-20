@@ -70,5 +70,5 @@
   translation: "コメント"
 
 # Related posts
-- id: related
+- id: seeAlso
   translation: "も参照してください"

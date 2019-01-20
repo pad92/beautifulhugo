@@ -31,7 +31,7 @@ enableGitInfo = true
   dateFormat = "January 2, 2006"
   comments = false
   commit = false
-#  gcse = ""
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 #  keywords = ["your", "keywords"]
   linkToMarkDown = false
   moreMeta = true
@@ -41,12 +41,13 @@ enableGitInfo = true
   rss = true
 #  since = "2006"
   socialShare = true
-  showRelatedPosts = true
   toc = false
   Katex = false
   Photoswipe = false
   useHLJS = true
   fancybox = true
+  delayDisqus = true
+  showRelatedPosts = true
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
