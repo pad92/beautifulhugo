@@ -85,3 +85,27 @@ td.gutter {
 .highlight td:last-child pre code, .highlight pre code {
   white-space: pre;
 }
+
+.highlight tr, .highlight pre {
+  border: none;
+}
+
+.highlight div:first-child {
+  border-radius: 4px;
+}
+
+.highlight td:first-child pre, .highlight pre {
+  border-top-left-radius: 4px;
+  border-top-right-radius: unset;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: unset;
+  overflow: hidden;
+}
+
+.highlight td:last-child pre, .highlight pre {
+  border-radius: unset;
+}
+
+.highlight td:last-child pre code, .highlight pre code {
+  white-space: pre;
+}
