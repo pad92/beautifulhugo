@@ -5,7 +5,7 @@ pages:
   - cd exampleSite ; hugo --themesDir ../../ --minify
   artifacts:
     paths:
-    - public
+    - ../public
   only:
   - master
   
