@@ -9,7 +9,7 @@
         {{ end }}
 
         <div class="posts-list">
-          {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
+          {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
           {{ range $pag.Pages }}
             <article class="post-preview">
               <a href="{{ .Permalink }}">
@@ -34,13 +34,6 @@
                 {{ end }}
               </div>
 
-              {{ if .Params.tags }}
-                <div class="blog-tags">
-                  {{ range .Params.tags }}
-                    <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-                  {{ end }}
-                </div>
-              {{ end }}
             </article>
           {{ end }}
         </div>

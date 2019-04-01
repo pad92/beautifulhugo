@@ -4,38 +4,10 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       {{ partial "toc" . }}
       <article role="main" class="blog-post">
-        {{ .Content }}
-
-        {{ if .Params.tags }}
-          <div class="blog-tags">
-            {{ range .Params.tags }}
-              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-            {{ end }}
-          </div>
-        {{ end }}
-
-        {{ if $.Param "socialShare" }}
-            <hr/>
-            <section id="social-share">
-              <div class="list-inline footer-links">
-                {{ partial "share-links" . }}
-              </div>
-            </section>
-        {{ end }}
-
-        {{ if .Site.Params.showRelatedPosts }}
-          {{ $related := .Site.RegularPages.Related . | first 3 }}
-          {{ with $related }}
-          <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
-          <ul>
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-          </ul>
-          {{ end }}
-        {{ end }}
+          {{ .Content }}
+        {{ partial "tags" . }}
+        {{ partial "share-links" . }}
       </article>
-
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
           {{ if .PrevInSection }}
@@ -50,8 +22,7 @@
           {{ end }}
         </ul>
       {{ end }}
-
-
+      {{ partial "related" . }}
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
         {{ if .Site.DisqusShortname }}
           {{ if .Site.Params.delayDisqus }}
@@ -78,7 +49,6 @@
           </div>
         {{ end }}
       {{ end }}
-
     </div>
   </div>
 </div>

@@ -35,6 +35,12 @@ title = "Bitbucket"
 icon = "fab fa-bitbucket"
 
 [[social_icons]]
+id = "docker"
+url = "https://hub.docker.com/u/%s"
+title = "Docker"
+icon = "fab fa-docker"
+
+[[social_icons]]
 id = "twitter"
 url = "https://twitter.com/%s"
 title = "Twitter"
@@ -110,7 +116,7 @@ icon = "fas fa-gamepad"
 id = "keybase"
 url = "https://keybase.io/%s"
 title = "Keybase"
-icon = "fas fa-key"
+icon = "fab fa-key"
 
 [[social_icons]]
 id = "vk"
